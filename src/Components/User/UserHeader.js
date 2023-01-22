@@ -21,7 +21,7 @@ const UserHeader = () => {
         setTitulo('Estatísticas')
         break;
       default:
-        setTitulo('Para minha conta')
+        setTitulo('Minha conta')
     }
 
   }, [location])
