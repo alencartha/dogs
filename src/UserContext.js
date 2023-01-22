@@ -12,7 +12,7 @@ export const UserStorage = ({ children }) => {
     const [error, setError] = React.useState(false)
     const navigate = useNavigate()
 
-   
+
 
     async function getUser(token) {
         const { url, options } = USER_GET(token)
@@ -46,7 +46,7 @@ export const UserStorage = ({ children }) => {
 
     }
 
-    const userLogout = React.useCallback(async function ()  {
+    const userLogout = React.useCallback(async function () {
         setData(null)
         setError(null)
         setLoading(false)
@@ -78,8 +78,8 @@ export const UserStorage = ({ children }) => {
                 finally {
                     setLoading(false)
                 }
-
-
+            } else {
+                setLogin(false)
             }
         }
 

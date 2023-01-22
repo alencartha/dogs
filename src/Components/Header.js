@@ -15,11 +15,8 @@ const Header = () => {
         <Link to='/' aria-label="Dogs - Home" className={styles.logo}>
           <Dogs />
         </Link>
-
         {data ? (<Link to='/conta' className={styles.login}>{data.username}</Link>) : <Link to='/login' className={styles.login}>Login / Criar</Link>}
-        {data && <button onClick={userLogout}>Sair</button>}
 
-       
       </nav>
     </header>
   )
