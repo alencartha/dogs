@@ -7,9 +7,6 @@ import PhotoDelete from './PhotoDelete';
 import Image from '../Helper/Image';
 
 const PhotoContent = ({ data, single }) => {
-
-  console.log(data)
-
   const user = React.useContext(UserContext)
   const { photo, comments } = data;
 

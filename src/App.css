@@ -51,7 +51,7 @@ a {
     margin: 0 auto;
 }
 
-.mainContainer{
+.mainContainer {
     margin-top: 2rem;
 }
 
@@ -64,7 +64,7 @@ a {
     z-index: 1;
 }
 
-.title::after{
+.title::after {
     content: '';
     display: block;
     width: 1.5rem;
@@ -77,16 +77,26 @@ a {
     z-index: -1;
 }
 
-.animeLeft{
+.animeLeft {
     opacity: 0;
     transform: translateX(-20px);
     animation: animeLeft .3s forwards;
 }
 
-@keyframes animeLeft{
-    to{
+@keyframes animeLeft {
+    to {
         opacity: 1;
         transform: initial;
     }
 }
 
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh + 10rem);
+}
+
+.AppBody {
+    flex: 1;
+}

@@ -7,6 +7,7 @@ import { UserContext } from '../../UserContext'
 import useFetch from '../../Hooks/useFetch'
 import Error from '../Helper/Error'
 import styles from './Login.module.css'
+import Head from '../Helper/Head'
 
 const LoginCreate = () => {
 
@@ -25,6 +26,8 @@ const LoginCreate = () => {
 
   return (
     <section className={`animeLeft `}>
+      <Head title="Crie sua conta" />
+
       <h1 className='title'>Cadastre-se</h1>
 
       <form onSubmit={handleCadastro}>
@@ -33,7 +36,7 @@ const LoginCreate = () => {
         <Input label="E-mail" type="email" name="email" id="email" {...email} />
         <Input label="Senha" type="password" name="password" id="password" {...password} />
         {loading ? <Button disabled>Cadastrando...</Button> : <Button>Cadastrar</Button>}
-        <Error error={error}/>
+        <Error error={error} />
 
 
       </form>

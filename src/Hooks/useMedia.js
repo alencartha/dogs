@@ -8,7 +8,6 @@ const useMedia = (media) => {
 
         function changeMatch() {
             const { matches } = window.matchMedia(media)
-            console.log(matches)
             setMatch(matches)
         }
         changeMatch()

@@ -36,7 +36,6 @@ const PhotoPost = () => {
         })
             .then((response) => response.json())
             .then(json => setUserCriado(json))
-            .catch((error) => console.log(error))
     }
 
     return (

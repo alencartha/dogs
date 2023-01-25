@@ -31,7 +31,6 @@ export function TOKEN_VALIDATE_POST(token) {
 
 
 export function USER_POST(body) {
-    console.log(body)
     return {
         url: API_URL + '/api/user',
         options: {
@@ -88,7 +87,7 @@ export function PHOTOS_GET({ page, total, user }) {
 export function PHOTO_GET_PAGE(id) {
     return {
         url: `${API_URL}/api/photo/${id}`,
-      
+
 
     }
 }
@@ -131,3 +130,29 @@ export function PHOTO_DELETE(id) {
 
     }
 }
+
+export function PASSWORD_LOST(body) {
+    return {
+      url: API_URL + '/api/password/lost',
+      options: {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      },
+    };
+  }
+  
+  export function PASSWORD_RESET(body) {
+    return {
+      url: API_URL + '/api/password/reset',
+      options: {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      },
+    };
+  }

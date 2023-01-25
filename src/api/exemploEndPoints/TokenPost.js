@@ -26,7 +26,6 @@ const TokenPost = () => {
         })
         .then((response) => response.json())
         .then(json => setToken(json.token))
-        .catch((error)=> console.log(error))
     }
 
     return (

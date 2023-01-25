@@ -15,7 +15,6 @@ const PhotoCommentsForm = ({ id, setComments }) => {
     const { url, options } = COMMENT_POST(id, { comment })
     const { response, json } = await request(url, options)
     if (response.ok) {
-      console.log(json)
       setComment('')
       setComments((comments) => [...comments, json])
     }
